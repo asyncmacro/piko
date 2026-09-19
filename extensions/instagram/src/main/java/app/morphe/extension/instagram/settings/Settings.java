@@ -68,6 +68,7 @@ public class Settings {
     public static final BooleanSetting ULTRA_BLOCK_STORIES = new BooleanSetting("ultra_block_stories", true);
     public static final BooleanSetting ULTRA_BLOCK_EXPLORE = new BooleanSetting("ultra_block_explore", true);
     public static final BooleanSetting ULTRA_LOW_RES_IMAGES = new BooleanSetting("ultra_low_res_images", true);
+    public static final BooleanSetting ULTRA_HIDE_PHOTOS = new BooleanSetting("ultra_hide_photos", false);
     public static final BooleanSetting ULTRA_AUTO = new BooleanSetting("ultra_auto_metered", false);
     public static final BooleanSetting UNLOCK_PLUS_BENEFITS = new BooleanSetting("unlock_plus_benefits", false);
     public static final StringSetting CHANGE_LIKE_ANIMATION = new StringSetting("change_like_animation", "ARES_LIKE_ACTIVATION");

@@ -597,6 +597,15 @@ public class ScreenBuilder {
                     )
             );
         }
+        if (SettingsStatus.ultraHidePhotos) {
+            addPreference(
+                    helper.switchPreference(
+                            str("piko_ultra_hide_photos"),
+                            str("piko_ultra_hide_photos_desc"),
+                            Settings.ULTRA_HIDE_PHOTOS
+                    )
+            );
+        }
         if (SettingsStatus.disableDiscoverPeople) {
             addPreference(
                     helper.switchPreference(

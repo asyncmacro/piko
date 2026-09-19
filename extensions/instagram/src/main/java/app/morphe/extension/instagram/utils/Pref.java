@@ -297,6 +297,11 @@ public class Pref {
         return ultraDataSaver() && SharedPref.getBooleanPref(Settings.ULTRA_LOW_RES_IMAGES);
     }
 
+    public static boolean ultraHidePhotos() {
+        return ultraDataSaver() && SettingsStatus.ultraHidePhotos
+                && SharedPref.getBooleanPref(Settings.ULTRA_HIDE_PHOTOS);
+    }
+
     public static boolean enableDownload() {
         return SharedPref.getBooleanPref(Settings.ENABLE_DOWNLOAD) && SettingsStatus.downloadMedia;
     }

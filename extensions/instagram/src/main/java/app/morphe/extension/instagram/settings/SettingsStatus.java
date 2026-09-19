@@ -198,11 +198,13 @@ public class SettingsStatus {
     public static void disableVideoAutoplay() { disableVideoAutoplay = true; }
     public static boolean ultraDataSaver = false;
     public static void ultraDataSaver() { ultraDataSaver = true; }
+    public static boolean ultraHidePhotos = false;
+    public static void ultraHidePhotos() { ultraHidePhotos = true; }
     public static boolean moreOptionsOnPost = false;
     public static void moreOptionsOnPost() { moreOptionsOnPost = true; }
     public static boolean moreOptionsOnProfile = false;
     public static void moreOptionsOnProfile() { moreOptionsOnProfile = true; }
-    public static boolean miscSection() {return ( ultraDataSaver || saveMediaCommentButton || moreOptionsOnProfile || moreOptionsOnPost || customiseStoryRingSize || changeLikeAnimation || unlockPlusBenefits || disableVideoAutoplay || removeEmptyBottomSpace || copyCommentButton || improveImageViewing || customiseStoryTimestamp || disableAnalytics || disableDiscoverPeople || followBackIndicator || viewStoryMentions || disableStoryFlipping || loopStory || hideReshareButton);}
+    public static boolean miscSection() {return ( ultraHidePhotos || ultraDataSaver || saveMediaCommentButton || moreOptionsOnProfile || moreOptionsOnPost || customiseStoryRingSize || changeLikeAnimation || unlockPlusBenefits || disableVideoAutoplay || removeEmptyBottomSpace || copyCommentButton || improveImageViewing || customiseStoryTimestamp || disableAnalytics || disableDiscoverPeople || followBackIndicator || viewStoryMentions || disableStoryFlipping || loopStory || hideReshareButton);}
 
     //DM section
     public static boolean unlimitedReplaysOnEphemeralMedia = false;
@@ -242,6 +244,7 @@ public class SettingsStatus {
         FLAGS.put(str("piko_enable_more_options_on_post"),SettingsStatus.moreOptionsOnPost);
         FLAGS.put(str("piko_disable_video_autoplay"),SettingsStatus.disableVideoAutoplay);
         FLAGS.put(str("piko_ultra_data_saver"),SettingsStatus.ultraDataSaver);
+        FLAGS.put(str("piko_ultra_hide_photos"),SettingsStatus.ultraHidePhotos);
         FLAGS.put(str("piko_remove_empty_bottom_space"),SettingsStatus.removeEmptyBottomSpace);
         FLAGS.put(str("piko_save_media_comment"),SettingsStatus.saveMediaCommentButton);
         FLAGS.put(str("piko_copy_comment"),SettingsStatus.copyCommentButton);
