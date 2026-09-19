@@ -69,7 +69,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 ## ⚙️ Patch Details
 
 <!-- PATCHES_START -->
-> **[v3.10.0-dev.2](https://github.com/asyncmacro/piko/releases/tag/v3.10.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;134 patches total
+> **[v3.10.0-dev.3](https://github.com/asyncmacro/piko/releases/tag/v3.10.0-dev.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;135 patches total
 <details>
 <summary>📦 Twitter&nbsp;&nbsp;•&nbsp;&nbsp;75 patches</summary>
 <br>
@@ -160,7 +160,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 </details>
 
 <details>
-<summary>📦 Instagram&nbsp;&nbsp;•&nbsp;&nbsp;59 patches</summary>
+<summary>📦 Instagram&nbsp;&nbsp;•&nbsp;&nbsp;60 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -202,6 +202,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 | [Hide Reels follow button](#hide-reels-follow-button) | Removes the follow button from Reels. |  |
 | [Hide group creation button on sharesheet](#hide-group-creation-button-on-sharesheet) |  |  |
 | [Hide notes tray](#hide-notes-tray) | Hides notes tray in DM section |  |
+| [Hide photos until tap](#hide-photos-until-tap) | Replaces photos with a blank placeholder until tapped. Photos load inline on tap. Works with the Ultra data saver master switch and auto mode. |  |
 | [Hide reshare button](#hide-reshare-button) | Hides the reshare button from both posts and reels. |  |
 | [Hide stories tray](#hide-stories-tray) | Hides stories tray from main feed. |  |
 | [Hide suggested content](#hide-suggested-content) | Hides suggested stories, reels, threads (Suggested posts will still be shown). |  |

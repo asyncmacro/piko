@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-09-19T19:16:43",
-  "description": "## [3.10.0-dev.2](https://github.com/asyncmacro/piko/compare/v3.10.0-dev.1...v3.10.0-dev.2) (2026-09-19)\n\n### ✨ New Features\n\n* **Instagram:** auto-enable Ultra data saver on metered connections ([28e3e30](https://github.com/asyncmacro/piko/commit/28e3e300320c8c54db8629d0cba686d2d2c89bf7))",
-  "download_url": "https://github.com/asyncmacro/piko/releases/download/v3.10.0-dev.2/patches-3.10.0-dev.2.mpp",
-  "signature_download_url": "https://github.com/asyncmacro/piko/releases/download/v3.10.0-dev.2/patches-3.10.0-dev.2.mpp.asc",
-  "version": "3.10.0-dev.2"
+  "created_at": "2026-09-19T20:14:22",
+  "description": "## [3.10.0-dev.3](https://github.com/asyncmacro/piko/compare/v3.10.0-dev.2...v3.10.0-dev.3) (2026-09-19)\n\n### ✨ New Features\n\n* **Instagram:** hide photos until tap ([53df40c](https://github.com/asyncmacro/piko/commit/53df40ca2310b152f29f016dd3163c4ad41ebf02))",
+  "download_url": "https://github.com/asyncmacro/piko/releases/download/v3.10.0-dev.3/patches-3.10.0-dev.3.mpp",
+  "signature_download_url": "https://github.com/asyncmacro/piko/releases/download/v3.10.0-dev.3/patches-3.10.0-dev.3.mpp.asc",
+  "version": "3.10.0-dev.3"
 }

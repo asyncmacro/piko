@@ -1,3 +1,9 @@
+## [3.10.0-dev.3](https://github.com/asyncmacro/piko/compare/v3.10.0-dev.2...v3.10.0-dev.3) (2026-09-19)
+
+### ✨ New Features
+
+* **Instagram:** hide photos until tap ([53df40c](https://github.com/asyncmacro/piko/commit/53df40ca2310b152f29f016dd3163c4ad41ebf02))
+
 ## [3.10.0-dev.2](https://github.com/asyncmacro/piko/compare/v3.10.0-dev.1...v3.10.0-dev.2) (2026-09-19)
 
 ### ✨ New Features
