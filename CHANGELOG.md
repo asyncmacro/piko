@@ -1,3 +1,9 @@
+## [3.10.0-dev.2](https://github.com/asyncmacro/piko/compare/v3.10.0-dev.1...v3.10.0-dev.2) (2026-09-19)
+
+### ✨ New Features
+
+* **Instagram:** auto-enable Ultra data saver on metered connections ([28e3e30](https://github.com/asyncmacro/piko/commit/28e3e300320c8c54db8629d0cba686d2d2c89bf7))
+
 ## [3.10.0-dev.1](https://github.com/asyncmacro/piko/compare/v3.9.0...v3.10.0-dev.1) (2026-09-19)
 
 ### 🐛 Bug Fixes

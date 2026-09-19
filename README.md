@@ -69,7 +69,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 ## ⚙️ Patch Details
 
 <!-- PATCHES_START -->
-> **[v3.10.0-dev.1](https://github.com/asyncmacro/piko/releases/tag/v3.10.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;134 patches total
+> **[v3.10.0-dev.2](https://github.com/asyncmacro/piko/releases/tag/v3.10.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;134 patches total
 <details>
 <summary>📦 Twitter&nbsp;&nbsp;•&nbsp;&nbsp;75 patches</summary>
 <br>
@@ -220,7 +220,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 | [Save deleted messages](#save-deleted-messages) | Captures incoming DMs locally as they arrive from the server and marks them when the sender deletes them. |  |
 | [Save media comment](#save-media-comment) | Adds a button to save media comments on posts and reels. |  |
 | [Theme](#theme) | Adds Material You and AMOLED controls to Piko settings on Android 12 and later. On Android 8–11, it applies a fixed Material You-style theme or an optional AMOLED theme. | • Pure-black AMOLED theme for Android 8–11 |
-| [Ultra data saver](#ultra-data-saver) | Master data-saving mode for limited connections: blocks feed and Reels autoplay, stories and explore prefetch, and loads low-resolution images. Each part can be toggled in Piko settings. |  |
+| [Ultra data saver](#ultra-data-saver) | Master data-saving mode for limited connections: blocks feed and Reels autoplay, stories and explore prefetch, and loads low-resolution images. Each part can be toggled in Piko settings, with optional auto-enable on metered connections. |  |
 | [Unlock Plus benefits](#unlock-plus-benefits) | Unlocks 'Plus' subscription benefits that are checked locally. USE IT AT YOUR OWN RISK |  |
 | [Unlock developer options](#unlock-developer-options) | Unlocks developer option by long pressing home icon |  |
 | [Unlock employee options](#unlock-employee-options) | Unlocks all options using by employee for debugging |  |
