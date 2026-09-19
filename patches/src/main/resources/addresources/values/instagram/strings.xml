@@ -99,6 +99,8 @@
     <string name="piko_disable_video_autoplay">Disable video autoplay</string>
     <string name="piko_ultra_data_saver">Ultra data saver</string>
     <string name="piko_ultra_data_saver_desc">Master switch for very limited connections. Blocks feed and Reels autoplay, stories and explore prefetch, and loads low-resolution images. Each part can be toggled below.</string>
+    <string name="piko_ultra_auto">Auto-enable on mobile data</string>
+    <string name="piko_ultra_auto_desc">Turns Ultra data saver on automatically on metered connections such as mobile data or hotspot, and off on unmetered Wi-Fi. Applies without restarting the app.</string>
     <string name="piko_ultra_block_feed_autoplay">Block feed video autoplay</string>
     <string name="piko_ultra_block_reels">Block Reels autoplay and prefetch</string>
     <string name="piko_ultra_block_reels_desc">Stops Reels from auto-playing and preloading next videos</string>

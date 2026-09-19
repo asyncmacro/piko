@@ -556,6 +556,13 @@ public class ScreenBuilder {
             );
             addPreference(
                     helper.switchPreference(
+                            str("piko_ultra_auto"),
+                            str("piko_ultra_auto_desc"),
+                            Settings.ULTRA_AUTO
+                    )
+            );
+            addPreference(
+                    helper.switchPreference(
                             str("piko_ultra_block_feed_autoplay"),
                             "",
                             Settings.ULTRA_BLOCK_FEED_AUTOPLAY

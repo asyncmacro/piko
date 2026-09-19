@@ -21,7 +21,7 @@ import app.morphe.patcher.patch.bytecodePatch
 val ultraDataSaverPatch =
     bytecodePatch(
         name = "Ultra data saver",
-        description = "Master data-saving mode for limited connections: blocks feed and Reels autoplay, stories and explore prefetch, and loads low-resolution images. Each part can be toggled in Piko settings.",
+        description = "Master data-saving mode for limited connections: blocks feed and Reels autoplay, stories and explore prefetch, and loads low-resolution images. Each part can be toggled in Piko settings, with optional auto-enable on metered connections.",
         default = false,
     ) {
         compatibleWith(COMPATIBILITY_INSTAGRAM)

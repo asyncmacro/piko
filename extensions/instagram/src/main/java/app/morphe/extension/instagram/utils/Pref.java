@@ -10,6 +10,7 @@ package app.morphe.extension.instagram.utils;
 import java.util.Set;
 import java.util.HashSet;
 import android.content.Context;
+import android.net.ConnectivityManager;
 import app.morphe.extension.shared.Utils;
 import app.morphe.extension.crimera.settings.StringSetting;
 
@@ -243,7 +244,37 @@ public class Pref {
     }
 
     public static boolean ultraDataSaver() {
-        return SharedPref.getBooleanPref(Settings.ULTRA_DATA_SAVER) && SettingsStatus.ultraDataSaver;
+        if (!SettingsStatus.ultraDataSaver) return false;
+        // Manual master switch: always on.
+        if (SharedPref.getBooleanPref(Settings.ULTRA_DATA_SAVER)) return true;
+        // Auto mode: engage only on metered connections (mobile data, hotspot).
+        return SharedPref.getBooleanPref(Settings.ULTRA_AUTO) && isMeteredConnection();
+    }
+
+    public static boolean ultraAutoMetered() {
+        return SharedPref.getBooleanPref(Settings.ULTRA_AUTO);
+    }
+
+    private static final long METERED_CACHE_TTL_MS = 30000;
+    private static long lastMeteredCheckMs = 0;
+    private static boolean lastMetered = true;
+
+    static synchronized boolean isMeteredConnection() {
+        long now = System.currentTimeMillis();
+        if (now - lastMeteredCheckMs < METERED_CACHE_TTL_MS) return lastMetered;
+        boolean metered = true;
+        try {
+            Context ctx = Utils.getContext();
+            ConnectivityManager cm =
+                    (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
+            // True for cellular/hotspot/metered Wi-Fi, false for unmetered Wi-Fi/Ethernet.
+            metered = cm == null || cm.isActiveNetworkMetered();
+        } catch (Exception ignored) {
+            // Fail-safe: save data when the network state is unknown.
+        }
+        lastMetered = metered;
+        lastMeteredCheckMs = now;
+        return metered;
     }
 
     public static boolean ultraBlockFeedAutoplay() {
