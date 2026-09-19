@@ -546,6 +546,50 @@ public class ScreenBuilder {
                     )
             );
         }
+        if (SettingsStatus.ultraDataSaver) {
+            addPreference(
+                    helper.switchPreference(
+                            str("piko_ultra_data_saver"),
+                            str("piko_ultra_data_saver_desc"),
+                            Settings.ULTRA_DATA_SAVER
+                    )
+            );
+            addPreference(
+                    helper.switchPreference(
+                            str("piko_ultra_block_feed_autoplay"),
+                            "",
+                            Settings.ULTRA_BLOCK_FEED_AUTOPLAY
+                    )
+            );
+            addPreference(
+                    helper.switchPreference(
+                            str("piko_ultra_block_reels"),
+                            str("piko_ultra_block_reels_desc"),
+                            Settings.ULTRA_BLOCK_REELS
+                    )
+            );
+            addPreference(
+                    helper.switchPreference(
+                            str("piko_ultra_block_stories"),
+                            "",
+                            Settings.ULTRA_BLOCK_STORIES
+                    )
+            );
+            addPreference(
+                    helper.switchPreference(
+                            str("piko_ultra_block_explore"),
+                            "",
+                            Settings.ULTRA_BLOCK_EXPLORE
+                    )
+            );
+            addPreference(
+                    helper.switchPreference(
+                            str("piko_ultra_low_res_images"),
+                            str("piko_ultra_low_res_images_desc"),
+                            Settings.ULTRA_LOW_RES_IMAGES
+                    )
+            );
+        }
         if (SettingsStatus.disableDiscoverPeople) {
             addPreference(
                     helper.switchPreference(

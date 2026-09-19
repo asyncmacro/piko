@@ -45,6 +45,9 @@ public class Links {
     private static final boolean DISABLE_DISCOVER_PEOPLE;
     private static final boolean DISABLE_ADS;
     private static final boolean DISABLE_HIGHLIGHTS;
+    private static final boolean ULTRA_BLOCK_STORIES;
+    private static final boolean ULTRA_BLOCK_EXPLORE;
+    private static final boolean ULTRA_BLOCK_REELS;
     private static final List<String> META_PACKAGES;
     private static final ShareLinkSanitizer SHARE_LINK_SANITIZER = new ShareLinkSanitizer(
             "instagram.com",
@@ -60,6 +63,9 @@ public class Links {
         DISABLE_COMMENTS = Pref.disableComments() && SettingsStatus.disableComments;
         DISABLE_DISCOVER_PEOPLE = Pref.disableDiscoverPeople() && SettingsStatus.disableDiscoverPeople;
         DISABLE_ADS = Pref.disableAds() && SettingsStatus.disableAds;
+        ULTRA_BLOCK_STORIES = Pref.ultraBlockStories();
+        ULTRA_BLOCK_EXPLORE = Pref.ultraBlockExplore();
+        ULTRA_BLOCK_REELS = Pref.ultraBlockReels();
 
         META_PACKAGES = Arrays.asList(
                 "com.instagram.android",      // Instagram
@@ -134,12 +140,12 @@ public class Links {
                         || path.contains("direct_v2/pending_inbox/?visual_message")
                         || path.contains("stories/hallpass/")
                         || path.contains("/api/v1/feed/reels_media_stream/")) {
-                    shouldBlockUri = DISABLE_STORIES;
+                    shouldBlockUri = DISABLE_STORIES || ULTRA_BLOCK_STORIES;
                 } else if (path.contains("/discover/topical_explore")
                         || path.contains("/discover/topical_explore_stream")
                         || (host.contains("i.instagram.com") && path.contains("/fbsearch/recent_searches/"))
                         || (host.contains("i.instagram.com") && path.contains("/fbsearch/top_serp/"))) {
-                    shouldBlockUri = DISABLE_EXPLORE;
+                    shouldBlockUri = DISABLE_EXPLORE || ULTRA_BLOCK_EXPLORE;
                 } else if (path.contains("/api/v1/media/") && path.contains("comments/")) {
                     shouldBlockUri = DISABLE_COMMENTS;
                 } else if (path.contains("/discover/ayml") || path.contains("/discover/chaining")) { // Thanks to  @brosssh
@@ -148,7 +154,7 @@ public class Links {
                         || path.contains("/async_ads/")
                         || path.contains("/feed/injected_reels_media/")
                         || path.contains("/api/v1/ads/graphql/")) {
-                    shouldBlockUri = DISABLE_ADS;
+                    shouldBlockUri = DISABLE_ADS || ULTRA_BLOCK_REELS;
                 } else if (path.contains("/highlights_tray")) {
                     shouldBlockUri = DISABLE_HIGHLIGHTS;
                 }

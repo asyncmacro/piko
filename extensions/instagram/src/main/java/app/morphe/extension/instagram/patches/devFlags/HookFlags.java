@@ -84,6 +84,18 @@ public class HookFlags {
         }
     }
 
+    // Called via addFlags("ultraDataSaverFlags") from the Ultra data saver patch.
+    // Master-gated: sub-toggles are checked through Pref so the user can re-enable
+    // individual parts while keeping the master switch on.
+    // Note: no hardcoded autoplay/prefetch flag IDs yet — those need to be mined
+    // from docs/mappings/439.0.0.37.89.json against the pinned APK and validated,
+    // otherwise a wrong ID silently changes unrelated behaviour. Network-level
+    // blocking lives in Links.interceptUri; image downscaling in Pref.improveImageViewing.
+    @SuppressWarnings("unused")
+    private static void ultraDataSaverFlags() {
+        if (!Pref.ultraDataSaver()) return;
+    }
+
     public static void load() {
         addRecommendedFlags();
     }

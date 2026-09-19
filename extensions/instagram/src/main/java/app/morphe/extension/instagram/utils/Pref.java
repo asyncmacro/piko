@@ -28,6 +28,8 @@ public class Pref {
         return value.replace("\r", "").replace("\n", "");
     }
 
+    private static final int ULTRA_IMAGE_SIZE = 320;
+
     public static boolean clearAllPreferences() {
         return SharedPref.clearAll();
     }
@@ -125,12 +127,12 @@ public class Pref {
     }
 
     public static boolean disableVideoAutoplay() {
-        return SharedPref.getBooleanPref(Settings.DISABLE_VIDEO_AUTOPLAY);
+        return SharedPref.getBooleanPref(Settings.DISABLE_VIDEO_AUTOPLAY) || ultraBlockFeedAutoplay();
     }
 
     public
     static boolean disableStories() {
-        return SharedPref.getBooleanPref(Settings.DISABLE_STORIES);
+        return SharedPref.getBooleanPref(Settings.DISABLE_STORIES) || ultraBlockStories();
     }
 
     public static boolean disableHighlights() {
@@ -138,7 +140,7 @@ public class Pref {
     }
 
     public static boolean disableExplore() {
-        return SharedPref.getBooleanPref(Settings.DISABLE_EXPLORE);
+        return SharedPref.getBooleanPref(Settings.DISABLE_EXPLORE) || ultraBlockExplore();
     }
 
     public static boolean disableComments() {
@@ -158,7 +160,7 @@ public class Pref {
     }
 
     public static boolean disableReelsScrolling() {
-        return SharedPref.getBooleanPref(Settings.DISABLE_REELS_SCROLLING) && SettingsStatus.disableReelsScrolling;
+        return (SharedPref.getBooleanPref(Settings.DISABLE_REELS_SCROLLING) && SettingsStatus.disableReelsScrolling) || ultraBlockReels();
     }
 
     public static boolean disableSwipeToCreate() {
@@ -231,11 +233,37 @@ public class Pref {
     }
 
     public static int improveImageViewing(int defaultSize) {
+        if (ultraLowResImages()) return Math.min(defaultSize, ULTRA_IMAGE_SIZE);
         return SharedPref.getBooleanPref(Settings.IMPROVE_IMAGE_VIEWING) ? MAX_IMAGE_SIZE : defaultSize;
     }
 
     public static Integer improveImageViewing(Integer defaultSize) {
+        if (ultraLowResImages()) return Math.min(defaultSize, ULTRA_IMAGE_SIZE);
         return SharedPref.getBooleanPref(Settings.IMPROVE_IMAGE_VIEWING) ? MAX_IMAGE_SIZE : defaultSize;
+    }
+
+    public static boolean ultraDataSaver() {
+        return SharedPref.getBooleanPref(Settings.ULTRA_DATA_SAVER) && SettingsStatus.ultraDataSaver;
+    }
+
+    public static boolean ultraBlockFeedAutoplay() {
+        return ultraDataSaver() && SharedPref.getBooleanPref(Settings.ULTRA_BLOCK_FEED_AUTOPLAY);
+    }
+
+    public static boolean ultraBlockReels() {
+        return ultraDataSaver() && SharedPref.getBooleanPref(Settings.ULTRA_BLOCK_REELS);
+    }
+
+    public static boolean ultraBlockStories() {
+        return ultraDataSaver() && SharedPref.getBooleanPref(Settings.ULTRA_BLOCK_STORIES);
+    }
+
+    public static boolean ultraBlockExplore() {
+        return ultraDataSaver() && SharedPref.getBooleanPref(Settings.ULTRA_BLOCK_EXPLORE);
+    }
+
+    public static boolean ultraLowResImages() {
+        return ultraDataSaver() && SharedPref.getBooleanPref(Settings.ULTRA_LOW_RES_IMAGES);
     }
 
     public static boolean enableDownload() {
