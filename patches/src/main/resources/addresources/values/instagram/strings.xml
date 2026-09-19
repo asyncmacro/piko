@@ -97,6 +97,15 @@
     <string name="piko_loop_story">Loop story</string>
     <string name="piko_loop_story_desc">Replay the current story when it ends</string>
     <string name="piko_disable_video_autoplay">Disable video autoplay</string>
+    <string name="piko_ultra_data_saver">Ultra data saver</string>
+    <string name="piko_ultra_data_saver_desc">Master switch for very limited connections. Blocks feed and Reels autoplay, stories and explore prefetch, and loads low-resolution images. Each part can be toggled below.</string>
+    <string name="piko_ultra_block_feed_autoplay">Block feed video autoplay</string>
+    <string name="piko_ultra_block_reels">Block Reels autoplay and prefetch</string>
+    <string name="piko_ultra_block_reels_desc">Stops Reels from auto-playing and preloading next videos</string>
+    <string name="piko_ultra_block_stories">Block stories prefetch</string>
+    <string name="piko_ultra_block_explore">Block explore prefetch</string>
+    <string name="piko_ultra_low_res_images">Low-resolution images</string>
+    <string name="piko_ultra_low_res_images_desc">Loads small images instead of full resolution. Avatars stay cached at low resolution.</string>
     <string name="piko_customise_story_timestamp">Customise story timestamp</string>
     <string name="piko_customise_story_timestamp_desc">Customise the timestamp that shows when the story was posted</string>
     <string name="piko_improve_image_viewing">Improve image viewing</string>
