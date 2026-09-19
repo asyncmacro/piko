@@ -69,7 +69,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 ## ⚙️ Patch Details
 
 <!-- PATCHES_START -->
-> **[v3.10.0-dev.8](https://github.com/crimera/piko/releases/tag/v3.10.0-dev.8)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;132 patches total
+> **[v3.10.0-dev.1](https://github.com/asyncmacro/piko/releases/tag/v3.10.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;134 patches total
 <details>
 <summary>📦 Twitter&nbsp;&nbsp;•&nbsp;&nbsp;75 patches</summary>
 <br>
@@ -160,7 +160,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 </details>
 
 <details>
-<summary>📦 Instagram&nbsp;&nbsp;•&nbsp;&nbsp;57 patches</summary>
+<summary>📦 Instagram&nbsp;&nbsp;•&nbsp;&nbsp;59 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -199,6 +199,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 | [External downloader](#external-downloader) | Adds support to share post links directly to external downloader |  |
 | [Filter stories](#filter-stories) | Filter stories to hide based on different categories |  |
 | [Friendship status indicator](#friendship-status-indicator) | Adds a follows you back status label on the profile page andshows a detailed friendship status breakdown on click |  |
+| [Hide Reels follow button](#hide-reels-follow-button) | Removes the follow button from Reels. |  |
 | [Hide group creation button on sharesheet](#hide-group-creation-button-on-sharesheet) |  |  |
 | [Hide notes tray](#hide-notes-tray) | Hides notes tray in DM section |  |
 | [Hide reshare button](#hide-reshare-button) | Hides the reshare button from both posts and reels. |  |
@@ -219,6 +220,7 @@ To patch with Twitter/X version 11.88 to 12.4, you must include patches from ano
 | [Save deleted messages](#save-deleted-messages) | Captures incoming DMs locally as they arrive from the server and marks them when the sender deletes them. |  |
 | [Save media comment](#save-media-comment) | Adds a button to save media comments on posts and reels. |  |
 | [Theme](#theme) | Adds Material You and AMOLED controls to Piko settings on Android 12 and later. On Android 8–11, it applies a fixed Material You-style theme or an optional AMOLED theme. | • Pure-black AMOLED theme for Android 8–11 |
+| [Ultra data saver](#ultra-data-saver) | Master data-saving mode for limited connections: blocks feed and Reels autoplay, stories and explore prefetch, and loads low-resolution images. Each part can be toggled in Piko settings. |  |
 | [Unlock Plus benefits](#unlock-plus-benefits) | Unlocks 'Plus' subscription benefits that are checked locally. USE IT AT YOUR OWN RISK |  |
 | [Unlock developer options](#unlock-developer-options) | Unlocks developer option by long pressing home icon |  |
 | [Unlock employee options](#unlock-employee-options) | Unlocks all options using by employee for debugging |  |
